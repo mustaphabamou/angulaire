@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 mx-auto mt-4">
+            <h1 style="text-align: center;font-weight: bold;font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                LIST OF COURSES</h1>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-6 mx-auto">
+            <input class="form-control" type="text" [(ngModel)]="myCourse">
+            <button (click)="addCourse()" class="btn btn-block mt-2 mb-2 btn-success">
+                <i class="fa fa-save mx-1"></i>Save
+            </button>
+            <button class="btn btn-block mt-2 btn-primary">
+                <i class="fa fa-edit mx-1"></i>Edit
+            </button>
+            <button class="btn btn-block mt-2 mb-2 btn-danger">
+                <i class="fa fa-remove mx-1"></i>Delete
+            </button>
+            <ul class="list-group">
+                <li *ngFor="let course of courses" class="list-group-item">
+                    {{ course }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
